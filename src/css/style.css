@@ -1,0 +1,608 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Space+Grotesk:wght@700&display=swap');
+
+:root {
+    --p-color : #595959;
+    --btn-color : #F7CA18;
+    --testimonial-color : #F5F6F8;
+    --gray : #413906;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 71px;
+}
+
+h2 {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 46px;
+}
+
+p , input {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--p-color);
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Space Grotesk';
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+b {
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+section > img {
+    width: 100%;
+}
+
+.container {
+    padding-right: 10%;
+    padding-left: 10%;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.fas  {
+    color: var(--btn-color);
+}
+
+nav {
+    margin-top: 40px;
+    flex-direction: column;
+}
+
+nav , nav div  {
+    display: flex;
+    align-items: center;
+}
+
+nav .sidebar {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    height: 100vh;
+    background: white;
+    color: black;
+    padding: 60px 25px;
+    width: 300px;
+    border-left: calc(100vw - 300px) solid rgba(0, 0, 0, 0.1);
+    background-clip: padding-box;
+    z-index: 9;
+}
+
+nav .left-side {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav .mobile {
+    min-width: 100%;
+    justify-content: space-between;
+}
+
+nav .right-side {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+nav .right-side .modes{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 212px;
+    height: 60px;
+    padding: 0 10px;
+    background: var(--testimonial-color);
+    border-radius: 5px;
+}
+
+nav .right-side .modes div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 90px;
+    height: 40px;
+}
+
+nav .right-side .modes div p {
+    font-family: 'Space Grotesk';
+    font-weight: lighter;
+}
+
+nav .right-side .modes .active {
+    background: white;
+    color: black;
+}
+
+nav .right-side .modes .active p {
+    margin: 0;
+    color: inherit!important;
+}
+
+nav .right-side a {
+    min-width: 60px;
+}
+
+nav .right-side .btn-primary {
+    background: var(--btn-color);
+    width: 225px;
+}
+
+
+.hero #hero-image {
+    width: 100%;
+}
+
+.hero .col h1 {
+    margin-bottom: 0px;
+}
+
+.hero .col h1 .never {
+    position: relative;
+}
+
+.hero .col h1 .never::after {
+    content: url(/Assets/Never-highlight.svg);
+    display: block;
+    position: absolute;
+    left: -0.4rem;
+    top: .2rem;
+}
+
+.hero .col .btn-primary {
+    background: var(--btn-color);
+    width: 225px;
+}
+
+
+.collaboration .col {
+    margin-bottom: 32px;
+}
+
+.collaboration .col a {
+    text-decoration: underline;
+}
+
+
+.testimonial .col div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.testimonial .col .users {
+    gap: 0;
+}
+
+.testimonial .testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.testimonial .testimonials .card {
+    max-width: 500px;
+    min-width: 210px;
+    background: var(--testimonial-color);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 10px 0;
+    padding-right: 10px;
+    align-self: flex-start;
+}
+
+.testimonial .testimonials .card:nth-child(2) {
+    align-self: flex-end;
+}
+
+.testimonial .testimonials .card .stars {
+    display: flex;
+    gap: 2px;
+}
+
+.testimonial .testimonials .card p {
+    margin: 0;
+}
+
+.testimonial .testimonials .card h2 {
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.testimonial .testimonials .card img {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    left: -30px;
+}
+
+
+.newsletter {
+    background: var(--btn-color);
+    gap: 20px;
+    padding-bottom: 0;
+}
+
+.newsletter .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.newsletter .col h2 {
+    color: black !important;
+    margin-bottom: 0;
+}
+
+.newsletter .col p {
+    color: #413906 !important;
+}
+
+.newsletter .col form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsletter .col form input {
+    background: white;
+    border: none;
+    border-radius: 5px;
+    padding: 18px 36px ;
+    color: var(--gray);
+}
+
+.newsletter .col form input[type="submit"] {
+    background: var(--gray);
+    color: white ;
+}
+
+
+
+.pricing .price {
+    display: flex;
+    flex-direction: column;
+    padding: 36px;
+    border-radius: 10px;
+}
+
+.pricing .price h2 {
+    margin: 0;
+    color: var(--p-color);
+}
+
+.pricing .price p#price-name {
+    font-family: 'Space Grotesk';
+    margin: 0;
+}
+
+.pricing .price span {
+    font-family: 'Space Grotesk';
+    font-size: 18px;
+    color: #9FA5B6;
+}
+
+.pricing .price .feature-item {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-bottom: 16px;
+    font-weight: 100;
+    font-family: 'Space Grotesk';
+}
+
+.pricing .price .feature-item svg{
+    min-width: 24px;
+    min-height: 24px;
+}
+
+.pricing .price .feature-item p {
+    font-family: 'Space Grotesk';
+    margin: 0;
+}
+
+.pricing .price .subcribe {
+    margin: auto 0 0 0;
+    background: var(--btn-color);
+    color: black;
+}
+
+.pricing .starter {
+    background: #434450;
+}
+
+.pricing .starter * {
+    color: #C6C8CD;
+}
+
+.pricing .starter h2 {
+    color: #C6C8CD;
+}
+
+
+footer {
+    background: var(--btn-color);
+    padding-top: 50px;
+}
+
+footer p {
+    color: #413906!important;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer ul {
+    display: flex;
+    gap: 55px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer ul p {
+    margin: 8px 0;
+}
+
+.footer ul h3 {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: black!important;
+}
+
+footer .social {
+    background: #413906;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--btn-color)!important;
+}
+
+footer .social .col {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+
+footer .social p {
+    color: var(--btn-color)!important;
+    margin: 0;
+}
+
+footer .social b {
+    color: var(--btn-color)!important;
+    font-family: Source Sans Pro;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+
+
+@media (min-width: 768px) {
+
+    .pricing {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 410 min-content;
+        grid-template-areas: 
+        'basic pro'
+        'starter starter';
+    }
+
+    .pricing .price .subcribe {
+        display: flex;
+        align-self: flex-end;
+    }
+
+    .pricing .basic {
+        grid-area: basic;
+    }
+    
+    .pricing .starter {
+        grid-area: starter;
+    }
+    
+    .pricing .pro {
+        grid-area: pro;
+    }
+
+
+
+    .newsletter .col form {
+        flex-direction: row;
+    }
+
+    .newsletter .col form input#email {
+        width: 250px;
+    }
+
+    .newsletter .col form input[type='submit'] {
+        width: 195px;
+        text-align: center;
+    }
+    
+}
+
+@media (min-width:1024px) {
+
+    .container:not(:nth-child(1)) {
+        display: flex;
+        gap: 30px;
+    }
+
+    .container > img {
+        width: 50%;
+    }
+
+    header .hero {
+        display: flex;
+    }
+
+    header .hero .col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
+
+    header .hero img#hero-image {
+        width: 50%;
+        order: 1;
+    }
+
+
+    .testimonial {
+        flex-direction: row-reverse;
+    }
+
+    .testimonial .testimonials {
+        width: 60vw;
+        max-width: 50%;
+        min-width: 500px;
+        padding: 0;
+    }
+
+    .testimonial .testimonials .card {
+        max-width: 450px;
+    }
+    
+    .newsletter {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        justify-content: space-between;
+        padding-top: 0;
+    }
+
+    .newsletter .col {
+        max-width: 50%;
+    }
+
+    .newsletter > img {
+        width: 40%;
+    }
+
+
+    .footer {
+        flex-direction: row;
+        gap: 20%;
+    }
+
+    .footer ul {
+        flex-wrap: nowrap;
+        max-width: 50%;
+    }
+
+    .footer .col {
+        max-width: 50%;
+    }
+
+}
+
+@media (min-width:1200px) {
+    
+    .active {
+        position: relative;
+    }
+
+    nav {
+        flex-direction: row;
+        min-width: 100%;
+        gap: 32px;
+    }
+    
+    nav .mobile label{
+        display: none;
+    }
+
+    nav .sidebar {
+        display: flex !important;
+        position: static;
+        height: min-content;
+        border: none;
+        padding: 0;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav .sidebar div {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    nav .sidebar div >  {
+        width: 100%;
+    }
+    
+    nav .mobile {
+        min-width: min-content;
+    }
+
+    nav .right-side {
+        margin: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+}
