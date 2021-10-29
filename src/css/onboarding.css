@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&family=Space+Grotesk:wght@700&display=swap');
+
+:root {
+    --p-color : #70757C;
+    --btn-color : #F7CA18;
+    --step-bc : #F5F6F8;
+    --border-color : #509AD6;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    text-decoration: none;
+    color: black;
+}
+
+p {
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--p-color);
+}
+
+h2 {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+span {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: lighter;
+    font-size: 20px;
+    color: var(--p-color);
+}
+
+.container {
+    padding: 0px 15%;
+}
+
+.btn {
+    display: flex;
+    width: 210px;
+    height: 60px;
+    background: var(--btn-color);
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    align-items: center;
+    margin: 40px 0;
+}
+
+nav .back {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+nav .mode{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 212px;
+    height: 60px;
+    padding: 0 10px;
+    background: var(--step-bc);
+    border-radius: 5px;
+}
+
+nav .mode div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+}
+
+nav .mode div p {
+    font-family: 'Space Grotesk';
+    font-weight: lighter;
+}
+
+nav .mode .active {
+    background: white;
+    color: black;
+}
+
+nav .mode .active p {
+    margin: 0;
+    color: inherit!important;
+}
+
+
+
+.content {
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.content .step {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 552px;
+    height: 537px;
+    background: #F5F6F8;
+    border-radius: 5px;
+    padding: 30px 50px; 
+    margin: 0 15%;
+}
+
+.content .step .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content .step .title {
+    text-align: center;
+    width: 75%;
+    align-self: center;
+}
+
+.content .step .action {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content .step .action .choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 170px;
+    height: 115px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.content .step .action .choice p {
+    color: #595959;
+    width: 150px;
+    margin-bottom: 0;
+}
+
+.content .step .action .choice .top {
+    display: flex;
+    align-items: center;
+}
+
+.content .step .action .choice .top h2 {
+    margin: 0;
+}
+
+.content .step .action .choice .top .radiobutton {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 1px solid #D2D2D2;
+    cursor: pointer;
+}
+
+/* .content .step .action .choice .top .radiobutton img {
+    display: none;
+} */
+
+.content .step .steping {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content .step .steping .previous {
+    background: inherit;
+}
+
+.content .step .footer {
+    text-align: center;
+    margin-top: 10px;
+} 
+
+/* .personal {
+    border: 2px solid var(--border-color);
+} */
+
+
+@media screen and (max-width: 800px) {
+    
+    nav .back h2 {
+        display: none;
+    }
+
+    .content .step {
+        width: max-content;
+        height: max-content;
+    }
+
+    .content .step .title {
+        width: 100%;
+    }
+
+    .content .step .action {
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 10px;
+    }
+
+    .content .step .action .choice {
+        width: 100%;
+    }
+
+    .content .step .action .choice p {
+        width: 100%;
+    }
+
+    .content .step .steping {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+}

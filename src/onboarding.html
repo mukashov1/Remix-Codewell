@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/onboarding.css">
+    <title>Remix</title>
+</head>
+<body>
+    
+    <nav class="container">
+        <a href="../index.html" class="back">
+            <i class="fas fa-chevron-square-left fa-2x "></i>
+            <h2>Back to homepage</h2>
+        </a>
+        <div class="mode">
+            <div class="light-mode active" onclick="changemode(this)" >
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.05175 9.75H0V8.25H3.05175C3.021 8.496 3 8.74575 3 9C3 9.25425 3.021 9.504 3.05175 9.75ZM5.32725 4.266L3.1665 2.10525L2.106 3.16575L4.26675 5.3265C4.575 4.92975 4.9305 4.57425 5.32725 4.266ZM13.734 5.3265L15.8948 3.16575L14.8342 2.10525L12.6735 4.266C13.0695 4.57425 13.425 4.9305 13.734 5.3265ZM9 3C9.25425 3 9.504 3.021 9.75 3.05175V0H8.25V3.05175C8.496 3.021 8.74575 3 9 3ZM9 15C8.74575 15 8.496 14.979 8.25 14.9482V18H9.75V14.9482C9.504 14.979 9.25425 15 9 15ZM14.9482 8.25C14.979 8.496 15 8.74575 15 9C15 9.25425 14.979 9.504 14.9482 9.75H18V8.25H14.9482ZM12.6735 13.734L14.8335 15.894L15.8948 14.8335L13.7347 12.6735C13.4257 13.0695 13.0703 13.425 12.6735 13.734ZM4.266 12.6727L2.106 14.8328L3.1665 15.8932L5.3265 13.7333C4.9305 13.425 4.57425 13.0695 4.266 12.6727ZM9 4.5C6.5145 4.5 4.5 6.5145 4.5 9C4.5 11.4855 6.5145 13.5 9 13.5C11.4855 13.5 13.5 11.4855 13.5 9C13.5 6.5145 11.4855 4.5 9 4.5Z" 
+                    />
+                </svg>
+                <p>  Light</p>
+            </div>
+            <div class="dark-mode" onclick="changemode(this)" >
+                <svg width="21" height="22" viewBox="0 0 21 22" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16.2628 16.1162C12.4326 18.3275 7.63635 17.0962 5.54505 13.474C3.45375 9.85174 4.78553 5.08236 8.6157 2.87101C9.08714 2.59882 9.57617 2.38595 10.0876 2.21458C9.88986 3.00709 9.82613 3.89964 9.87341 4.80961C9.97248 6.71611 10.5678 8.85359 11.6602 10.543C12.6182 12.0246 13.9288 13.4244 15.3695 14.3433C16.0267 14.7625 16.7473 15.1026 17.4946 15.2873C17.117 15.5847 16.7007 15.8634 16.2628 16.1162Z" 
+                    stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                <p>  Dark</p>
+            </div>
+        </div>
+    </nav>
+
+    <section class="content">
+        <div class="step step1">
+            <div class="top">
+                <img src="../Assets/Remix Logo Light Mode.svg" alt="Logo">
+                <span>Step 1/3</span>
+            </div>
+            
+            <div class="title">
+                <h2>Set up your Remix Environment</h2>
+                <p>This will take less than a minute, we use this information to customize Remix for you;   </p>
+            </div>
+
+            <div class="action">
+                <div class="choice personal">
+                    <div class="top">
+                        <h2>Personal Use</h2>
+                        <span class="radiobutton" onclick="choosing(this)"></span>
+                        <img src="../Assets/Checkmark-blue.svg" alt="" width="20" style="display: none;">
+                    </div>
+                    <p> I’m using this for a team of <2.</p>
+                </div>
+                <div class="choice corporate">
+                    <div class="top">
+                        <h2>Corporate Use</h2>
+                        <span class="radiobutton" onclick="choosing(this)"></span>
+                        <img src="../Assets/Checkmark-blue.svg" alt="" width="20" style="display: none;">
+                    </div>
+                    <p>I’m using this for a team of >2.</p>
+                </div>
+            
+            </div>
+
+            <div class="steping">
+                <a href="#" class="btn previous">Previous</a>
+                <a href="#" class="btn next">Next</a>
+            </div>
+
+            <div class="footer">
+                <span>© 2021 Remix. All Rights Reserved.</span>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function choosing(element) {
+
+            let selected;
+
+            if (element.parentNode.parentNode.className == "choice personal") {
+                document.querySelector('.personal').style.border = '2px solid var(--border-color)';
+                document.querySelector('.personal img').style.display = 'block';
+                element.style.display = 'none';
+                console.log(element);
+                selected = 'personal';
+
+                document.querySelector('.corporate').style.border = 'none';
+                document.querySelector('.corporate img').style.display = 'none';
+                document.querySelector('.corporate span').style.display = 'block';
+            }
+
+            else {
+                document.querySelector('.corporate').style.border = '2px solid var(--border-color)';
+                document.querySelector('.corporate img').style.display = 'block';
+                element.style.display = 'none';
+                selected = 'corporate';
+
+                document.querySelector('.personal').style.border = 'none';
+                document.querySelector('.personal img').style.display = 'none';
+                document.querySelector('.personal span').style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
