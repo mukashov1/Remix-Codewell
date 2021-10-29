@@ -30,8 +30,8 @@
                 document.querySelector('.dark-mode').className = "dark-mode";
 
                 document.head.removeChild(document.head.querySelector('style'));
-                document.querySelector('nav .mobile img').src = "../Assets/Remix Logo Light Mode.svg";
-                document.querySelector('header .hero img').src = "../Assets/Hero Image (Light Mode).svg";
+                document.querySelector('nav .mobile img').src = " Assets/Remix Logo Light Mode.svg";
+                document.querySelector('header .hero img').src = " Assets/Hero Image (Light Mode).svg";
 
             }
             
@@ -40,8 +40,8 @@
                 element.className = "dark-mode active";
                 document.querySelector('.light-mode').className = "light-mode";
                 
-                document.querySelector('nav .mobile img').src = "../Assets/Remix-logo.svg";
-                document.querySelector('header .hero img').src = "../Assets/Hero Image.svg";
+                document.querySelector('nav .mobile img').src = " Assets/Remix-logo.svg";
+                document.querySelector('header .hero img').src = " Assets/Hero Image.svg";
                 const style = document.createElement('style');
                 style.innerHTML = `
 
