@@ -11,6 +11,10 @@ body {
     margin: 0;
 }
 
+* {
+    animation-fill-mode: forwards;
+}
+
 a {
     font-family: 'Space Grotesk';
     font-style: normal;
@@ -74,6 +78,12 @@ nav .back {
     gap: 18px;
 }
 
+nav .back i{
+    --fa-primary-color : white;
+    --fa-secondary-color : #41424E;
+    --fa-secondary-opacity : 1;
+}
+
 nav .mode{
     display: flex;
     gap: 10px;
@@ -95,6 +105,10 @@ nav .mode div {
     width: 90px;
     height: 40px;
     cursor: pointer;
+}
+
+nav .mode .dark-mode {
+    color: var(--p-color);
 }
 
 nav .mode div p {
@@ -150,44 +164,6 @@ nav .mode .active p {
     align-items: center;
 }
 
-.content .step .action .choice {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 170px;
-    height: 115px;
-    background: #FFFFFF;
-    border-radius: 5px;
-    padding: 20px;
-}
-
-.content .step .action .choice p {
-    color: #595959;
-    width: 150px;
-    margin-bottom: 0;
-}
-
-.content .step .action .choice .top {
-    display: flex;
-    align-items: center;
-}
-
-.content .step .action .choice .top h2 {
-    margin: 0;
-}
-
-.content .step .action .choice .top .radiobutton {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    border: 1px solid #D2D2D2;
-    cursor: pointer;
-}
-
-/* .content .step .action .choice .top .radiobutton img {
-    display: none;
-} */
-
 .content .step .steping {
     display: flex;
     justify-content: space-around;
@@ -207,6 +183,77 @@ nav .mode .active p {
     border: 2px solid var(--border-color);
 } */
 
+.content .step1 .action .choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 170px;
+    height: 115px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.content .step1 .action .choice p {
+    color: #595959!important;
+    width: 150px;
+    margin-bottom: 0;
+}
+
+.content .step1 .action .choice .top {
+    display: flex;
+    align-items: center;
+}
+
+.content .step1 .action .choice .top h2 {
+    color: black!important;
+    margin: 0;
+}
+
+.content .step1 .action .choice .top .radiobutton {
+    width: 18px;
+    height: 18px;
+    border: 1px solid #D2D2D2;
+    cursor: pointer;
+}
+
+.content .step1 .steping .previous {
+    cursor: no-drop;
+}
+
+.content .step2 .action .figmabtn {
+    width: 75%;
+    gap: 16px;
+}
+
+.content .step3 .action form {
+    display: flex;
+    gap: 40px;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.content .step3 .action form input {
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 18px 36px;
+    font-family: 'Source Sans Pro';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 23px;
+    color: #413906;
+}
+
+.content .step3 .action form button {
+    border: none;
+    padding: 18px 24px;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
 
 @media screen and (max-width: 800px) {
     
@@ -228,18 +275,38 @@ nav .mode .active p {
         gap: 16px;
         margin-bottom: 10px;
     }
-
-    .content .step .action .choice {
-        width: 100%;
-    }
-
-    .content .step .action .choice p {
-        width: 100%;
-    }
-
+    
     .content .step .steping {
         flex-direction: column;
         gap: 10px;
     }
+    
+    .content .step1 .action .choice {
+        width: 100%;
+    }
+    
+    .content .step1 .action .choice p {
+        width: 100%;
+    }
 
+    .content .step2 .action .figmabtn {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .content .step3 .action form {
+        flex-direction: column;
+        width: 100%;
+        gap: 16px;
+    }
+
+    .content .step3 .action form button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .content .step3 .action form input {
+        width: 80%;
+    }
+    
 }

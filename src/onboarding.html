@@ -13,7 +13,7 @@
     
     <nav class="container">
         <a href="../index.html" class="back">
-            <i class="fas fa-chevron-square-left fa-2x "></i>
+            <i class="fad fa-chevron-square-left fa-2x"></i>
             <h2>Back to homepage</h2>
         </a>
         <div class="mode">
@@ -50,7 +50,8 @@
                 <div class="choice personal">
                     <div class="top">
                         <h2>Personal Use</h2>
-                        <span class="radiobutton" onclick="choosing(this)"></span>
+                        <input class="radiobutton" form="form" onclick="choosing(this)" type="radio" name="choice" value="personal">
+                        <!-- <span class="radiobutton" onclick="choosing(this)"></span> -->
                         <img src="../Assets/Checkmark-blue.svg" alt="" width="20" style="display: none;">
                     </div>
                     <p> I’m using this for a team of <2.</p>
@@ -58,7 +59,8 @@
                 <div class="choice corporate">
                     <div class="top">
                         <h2>Corporate Use</h2>
-                        <span class="radiobutton" onclick="choosing(this)"></span>
+                        <input class="radiobutton" form="form" onclick="choosing(this)" type="radio" name="choice" value="corporate">
+                        <!-- <span class="radiobutton" onclick="choosing(this)"></span> -->
                         <img src="../Assets/Checkmark-blue.svg" alt="" width="20" style="display: none;">
                     </div>
                     <p>I’m using this for a team of >2.</p>
@@ -67,7 +69,7 @@
             </div>
 
             <div class="steping">
-                <a href="#" class="btn previous">Previous</a>
+                <a class="btn previous">Previous</a>
                 <a href="#" class="btn next">Next</a>
             </div>
 
@@ -76,37 +78,68 @@
             </div>
 
         </div>
+
+        <div class="step step2" style="display: none;">
+            <div class="top">   
+                <img src="../Assets/Remix Logo Light Mode.svg" alt="Logo">
+                <span>Step 2/3</span>
+            </div>
+            
+            <div class="title">
+                <h2>Link your Figma Account</h2>
+                <p>We use your account to display your projects in the plugin’s main dashboard.</p>
+            </div>
+            
+            <div class="action">
+                <a href="#" class="btn figmabtn">
+                    <img src="../Assets/figma-logo.svg" alt="Figma Logo">
+                    Link Figma Account
+                </a>
+            </div>
+            
+            <div class="steping">
+                <a href="#" class="btn previous">Previous</a>
+                <a href="#" class="btn next">Next</a>
+            </div>
+            
+            <div class="footer">
+                <span>© 2021 Remix. All Rights Reserved.</span>
+            </div>
+            
+        </div>
+        
+        <div class="step step3" style="display: none;">
+            <div class="top">
+                <img src="../Assets/Remix Logo Light Mode.svg" alt="Logo">
+                <span>Step 3/3</span>
+            </div>
+            
+            <div class="title">
+                <h2>Confirm Your Email Address</h2>
+                <p>Enter your email address below, and click on Send Code to verify it.</p>
+            </div>
+
+            <div class="action">
+                <form action="../index.html" method="get" id="form">
+                    <input type="email" id="email" placeholder="Enter email address" name="email">
+                    <button type="submit" form="form" class="btn"><h3><i class="fas fa-paper-plane fa-1x"></i> Send Code</h3></button>
+                </form>
+            </div>
+
+            <div class="steping">
+                <a href="#" class="btn previous">Previous</a>
+                <a href="../index.html" class="btn continue">Continue</a>
+            </div>
+
+            <div class="footer">
+                <span>© 2021 Remix. All Rights Reserved.</span>
+            </div>
+
+        </div>
+        
     </section>
 
-    <script>
-        function choosing(element) {
-
-            let selected;
-
-            if (element.parentNode.parentNode.className == "choice personal") {
-                document.querySelector('.personal').style.border = '2px solid var(--border-color)';
-                document.querySelector('.personal img').style.display = 'block';
-                element.style.display = 'none';
-                console.log(element);
-                selected = 'personal';
-
-                document.querySelector('.corporate').style.border = 'none';
-                document.querySelector('.corporate img').style.display = 'none';
-                document.querySelector('.corporate span').style.display = 'block';
-            }
-
-            else {
-                document.querySelector('.corporate').style.border = '2px solid var(--border-color)';
-                document.querySelector('.corporate img').style.display = 'block';
-                element.style.display = 'none';
-                selected = 'corporate';
-
-                document.querySelector('.personal').style.border = 'none';
-                document.querySelector('.personal img').style.display = 'none';
-                document.querySelector('.personal span').style.display = 'block';
-            }
-        }
-    </script>
+    <script src="javascript/onboard.js"></script>
 
 </body>
 </html>
