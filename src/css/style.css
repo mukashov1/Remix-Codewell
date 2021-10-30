@@ -195,7 +195,7 @@ nav .right-side .btn-primary {
 }
 
 .hero .col h1 .never::after {
-    content: url(/Assets/Never-highlight.svg);
+    content: url(../../Assets/Never-highlight.svg);
     display: block;
     position: absolute;
     left: -0.4rem;
